@@ -96,7 +96,7 @@ img{
 
 .title{
     color:white;
-    font-size:clamp(1.5rem,4vw,3rem);
+    font-size:clamp(1.2rem,4vw,3rem);
     font-family:'Great Vibes',cursive;
     text-align:center;
     margin-top:6.3rem;
@@ -212,18 +212,18 @@ img{
 .text {
     flex: 1;
     color: #2C1E12;
-    font-size: 1.25rem;
     line-height: 1.6;
 }
 
 .text h3 {
     font-weight: bold;
     margin-bottom: 1rem;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
 }
 
 .text p {
     margin-bottom: 3.12rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 
 input[type="button"], button {
@@ -272,7 +272,8 @@ input:hover {
 
 @media (max-width: 992px) {
     .section-2 {
-        height: 120vh;
+        height: auto;
+        padding: 20px;
     }
     .container {
         flex-direction: column-reverse; 
@@ -475,7 +476,7 @@ input:hover {
 }
 
 .price-cart p {
-    font-size: clamp(1.7rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
 }
 
@@ -536,12 +537,12 @@ input:hover {
     }
 
     .price-cart p{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .price-cart button{
         width: 170px;
-        height: 40px;
+        height: 35px;
         font-size: 12px;
     }
 }
