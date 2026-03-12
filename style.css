@@ -13,6 +13,10 @@ body{
     outline:none;
 }
 
+section {
+    scroll-margin-top: 120px; 
+}
+
 /* SECTION 1 */
 /* HEADER */
 header{
@@ -28,8 +32,12 @@ header{
     align-items:center;
     justify-content:space-between;
     padding:10px 30px;
-    background:transparent;
+    background-color: black;
     box-shadow:0 0 10px rgba(0,0,0,0.35);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* LOGO */
@@ -99,7 +107,7 @@ img{
     font-size:clamp(1.2rem,4vw,3rem);
     font-family:'Great Vibes',cursive;
     text-align:center;
-    margin-top:6.3rem;
+    padding-top:10rem;
 }
 
 /* HAMBURGER */
@@ -112,6 +120,10 @@ img{
 
 /* MOBILE VIEW (768px and below) */
 @media (max-width: 768px) {
+
+    section {
+        scroll-margin-top: 90px; 
+    }
     
     .navigation {
         display: flex;
@@ -120,6 +132,10 @@ img{
         padding: 20px 15px;
         position: relative;
         gap: 15px; 
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;  
     }
 
     .hamburger {
@@ -187,6 +203,10 @@ img{
     @keyframes slideDown {
         from { opacity: 0; transform: translateY(-10px); }
         to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home {
+        padding-top: 80px; 
     }
 }
 
