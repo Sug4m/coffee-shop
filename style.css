@@ -567,26 +567,23 @@ input:hover {
     }
 }
 
+/* --- Desktop & General Styles --- */
 .order-section {
     padding: 50px 20px;
     text-align: center;
-    background-color: #FDF5E6;
-    border-top: 2px solid black;
+    background-color: #fdfaf5;
 }
 
 .form-title {
     color: #6f4e37;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.form-subtitle {
-    margin-bottom: 30px;
-    color: #555;
-}
-
 .coffee-form {
-    max-width: 500px;
-    margin: auto;
+    width: 100%; /* Gamit ang width 100% para sumunod sa screen */
+    max-width: 500px; /* Pero hanggang 500px lang pag sa desktop */
+    margin: 0 auto;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -599,22 +596,12 @@ input:hover {
     gap: 5px;
 }
 
-.form-group label {
-    font-weight: bold;
-    color: #333;
-}
-
 .form-group input, 
 .form-group textarea {
-    padding: 10px;
+    padding: 12px; /* Mas malaki para madaling i-tap ng daliri */
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-}
-
-.form-group textarea {
-    height: 100px;
-    resize: vertical; /* Para pwedeng palakihin ng user pababa */
+    border-radius: 8px; /* Mas modernong rounded corners */
+    font-size: 16px; /* Importante: 16px para hindi mag-auto-zoom ang iPhone */
 }
 
 .submit-btn {
@@ -622,15 +609,32 @@ input:hover {
     background-color: #6f4e37;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: 100%; /* Full width para madaling pindutin sa mobile */
 }
 
-.submit-btn:hover {
-    background-color: #563d2d; /* Mas iitim kapag itinapat ang mouse */
+/* --- MOBILE RESPONSIVE FIX (The Magic) --- */
+@media (max-width: 600px) {
+    .order-section {
+        padding: 30px 15px; /* Binawasan ang space sa gilid */
+    }
+
+    .form-title {
+        font-size: 1.5rem; /* Pinaliit ang text para sa mobile */
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 14px; /* Mas swabe sa maliit na screen */
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 
 /* Section 5 */
